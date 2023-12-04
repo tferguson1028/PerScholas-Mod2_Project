@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function Frag_Clickable(props) {
+function Clickable(props) {
   // https://blog.logrocket.com/complete-guide-react-default-props/
   const { dispatch = () => {}, state = null, action = {action: null, payload: null}} = props;
   return (
@@ -22,10 +22,10 @@ function Frag_Clickable(props) {
   )
 }
 
-Frag_Clickable.propTypes = {
+Clickable.propTypes = {
   dispatch: PropTypes.func,
   state: PropTypes.any,
   action: PropTypes.object
 }
 
-export default Frag_Clickable;
+export default Clickable;
