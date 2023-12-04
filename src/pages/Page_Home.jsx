@@ -7,6 +7,4 @@ function Page_Home(props) {
   )
 }
 
-Page_Home.propTypes = {};
-
 export default Page_Home;

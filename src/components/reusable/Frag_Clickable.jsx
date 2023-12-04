@@ -1,11 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function Frag_Clickable( props ) {
+function Frag_Clickable(props) {
+  // https://blog.logrocket.com/complete-guide-react-default-props/
+  const { dispatch = () => {}, state = null, action = {action: null, payload: null}} = props;
   return (
     <div className="clickableContainer" style={{opacity: 0, position: "relative", width: "100%", height: "100%"}}>
       <button 
-        onClick={() => {props.dispatch(props.state, props.payload)}}
+        onClick={() => {dispatch(state, action)}}
         style={{
           position: "absolute",
           // visibility: 'hidden',
@@ -21,9 +23,9 @@ function Frag_Clickable( props ) {
 }
 
 Frag_Clickable.propTypes = {
-  dispatch: PropTypes.string,
+  dispatch: PropTypes.func,
   state: PropTypes.any,
-  payload: PropTypes.object
+  action: PropTypes.object
 }
 
 export default Frag_Clickable;
