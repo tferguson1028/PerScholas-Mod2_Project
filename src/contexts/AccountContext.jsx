@@ -5,9 +5,15 @@ const AccountContext = createContext();
 function AccountContextProvider(props) 
 {
   const [ accountLoggedIn, setAccountLoggedIn ] = useState(false);
+  
+  function loginDispatch(username, password)
+  {
+    setAccountLoggedIn(true);
+  }
+  
   return (
     <AccountContext.Provider 
-      value = {{ accountLoggedIn, setAccountLoggedIn }}
+      value = {{ accountLoggedIn, loginDispatch }}
     >
       {props.children}
     </AccountContext.Provider>

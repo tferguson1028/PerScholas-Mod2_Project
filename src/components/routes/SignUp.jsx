@@ -1,6 +1,10 @@
-import React from 'react'
+import React, {useContext} from 'react'
+import AccountContext from '../../contexts/AccountContext';
 
-function SignUp() {
+function SignUp() 
+{
+  const loginDispatch = useContext(AccountContext);
+
   return (
     <>
       <label htmlFor="userName">User Name</label>
@@ -12,4 +16,4 @@ function SignUp() {
   )
 }
 
-export default SignUp
+export default SignUp;

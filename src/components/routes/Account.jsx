@@ -3,7 +3,6 @@ import AccountContext from '../../contexts/AccountContext';
 
 function Account() {
   const accountLoggedIn = useContext(AccountContext);
-  const setAccountLoggedIn = useContext(AccountContext);
 
   function loggedIn()
   {
@@ -12,7 +11,11 @@ function Account() {
         <div className='AccountHeader'>
           <span>Account Name</span>
         </div>
-        <div>
+        <div className='AccountDetails'>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
         </div>
       </>
     );
