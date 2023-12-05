@@ -1,0 +1,13 @@
+- Due Monday before class
+
+- The project itself, simply, should impress. 
+  Something that can be a portfolio piece.
+  Something you can show off.
+  It has to use an API in some way.
+
+- Use React Routers (Fake pages)
+- 50 commits (10 per day)
+- Must use free API
+- Fetch and useEffect are required
+- No HTML Canvas
+- No CSS Framework
