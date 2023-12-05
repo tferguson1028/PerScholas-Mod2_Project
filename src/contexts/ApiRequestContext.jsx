@@ -10,6 +10,7 @@ function ApiContextProvider(props)
   
   function createAPIRequest()
   {
+    return null;
     return new Request(
       `${uri}${path}`,
       {
