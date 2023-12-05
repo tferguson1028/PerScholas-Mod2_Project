@@ -22,8 +22,8 @@ function App()
           <Route index element={<HomePage />} />
           <Route path={pages.homePage.path} element={<HomePage />} />
           <Route path={pages.accountPage.path} element={<Account />} />
-          <Route path={pages.accountPage.path+"/login"} element={<Login />} />
-          <Route path={pages.accountPage.path+"/signup"} element={<SignUp />} />
+          <Route path={pages.accountPage.path+"/"+pages.accountPage.sub.login.path} element={<Login />} />
+          <Route path={pages.accountPage.path+"/"+pages.accountPage.sub.signup.path} element={<SignUp />} />
           <Route path={pages.stockSearchPage.path} element={<StockSearch />} />
           <Route path={pages.stockSearchPage.path+"/*"} element={<CompanyStockPage />} />
           <Route path={pages.summaryPage.path} element={<EndSummary />} />
