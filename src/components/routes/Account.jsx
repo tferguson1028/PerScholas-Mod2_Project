@@ -9,7 +9,7 @@ function Account() {
     return (
       <>
         <div className='AccountHeader'>
-          <span>Account Name</span>
+          <span className='TextTitle'>Account Name</span>
         </div>
         <div className='AccountDetails'>
           <span></span>

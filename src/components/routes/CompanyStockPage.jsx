@@ -2,7 +2,9 @@ import React from 'react'
 
 function CompanyStockPage() {
   return (
-    <div>CompanyStockPage</div>
+    <>
+      <span className='TextTitle'>Company Title</span>
+    </>
   )
 }
 

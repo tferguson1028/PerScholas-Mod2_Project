@@ -6,7 +6,7 @@ export const APIRequestContext = createContext();
 function ApiContextProvider(props) 
 {
   const [ APIRequest, setAPIRequest ] = useState(createAPIRequest());
-  const [ APIData, setAPIData ] = useState(fetchAPIData());
+  const [ APIData, setAPIData ] = useState(fetchAPIData(""));
   
   function createAPIRequest()
   {
