@@ -1,13 +1,19 @@
-import React, {useContext} from 'react'
+import React, {useContext} from 'react';
+import AccountContext from '../../contexts/AccountContext';
 
 function Account() {
-  const { accountLoggedIn } = useContext(AccountContext);
+  const accountLoggedIn = useContext(AccountContext);
+  const setAccountLoggedIn = useContext(AccountContext);
 
   function loggedIn()
   {
     return (
       <>
-        <span>Account Name</span>
+        <div className='AccountHeader'>
+          <span>Account Name</span>
+        </div>
+        <div>
+        </div>
       </>
     );
   }
@@ -16,8 +22,8 @@ function Account() {
   {
     return (
       <>
-        <button>Sign Up</button>
-        <button>Log In</button>
+        <a href="account/signup"><button>Sign Up</button></a>
+        <a href="account/login"><button>Log In</button></a>
       </>
     );
   }
