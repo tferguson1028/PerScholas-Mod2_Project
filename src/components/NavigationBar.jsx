@@ -1,9 +1,9 @@
 import React from 'react'
 
-function NavigationBer() {
+function NavigationBar() {
   return (
     <div>NavigationBer</div>
   )
 }
 
-export default NavigationBer
+export default NavigationBar

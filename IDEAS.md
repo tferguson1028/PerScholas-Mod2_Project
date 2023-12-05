@@ -2,7 +2,7 @@
 Stock market practice app.
 User can:
 - Set personal variables:
-  - Initial Account Balance.
+  - Initial Account Balance
 - Set start date
 - Add or remove stocks during that date
 - Set a end data
