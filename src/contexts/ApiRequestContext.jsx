@@ -13,7 +13,7 @@ function ApiContextProvider(props)
       body: body
     }
   );
-  const { apiRequest, setAPIRequest } = useState(null);
+  const { apiRequest, setAPIRequest } = useState(request);
   
   async function fetchAPI(request) 
   {
