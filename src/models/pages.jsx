@@ -5,5 +5,4 @@ const pages = {
   summaryPage: { textContent: "End Date Summary", path: "summary"}
 };
 
-// const pages = ["Home", "Account Start", "Stock Search", "End Summary"];
 module.exports = pages;

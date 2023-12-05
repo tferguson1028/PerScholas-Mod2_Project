@@ -8,7 +8,8 @@ import EndSummary from "./components/routes/EndSummary";
 
 import pages from "./models/pages";
 
-function App() {
+function App() 
+{
   return (
     <div className="App">
       <NavigationBar />
