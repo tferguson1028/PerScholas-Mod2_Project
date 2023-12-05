@@ -5,22 +5,26 @@ export const APIRequestContext = createContext();
 
 function ApiContextProvider(props) 
 {
-  // const httpRequest = new Request(
-  //   `${uri}${path}`,
-  //   {
-  //     method: requestMethod,
-  //     headers: header
-  //   }
-  // );
+  const request = new Request(
+    `${uri}${path}`,
+    {
+      method: requestMethod,
+      headers: header,
+      body: body
+    }
+  );
+  const { apiRequest, setAPIRequest } = useState(null);
   
-  // async function fetchAPI() { console.log(await fetch(httpRequest)); }
+  async function fetchAPI(request) 
+  {
+    console.log(request);
+    console.log((await fetch(request)).json()); 
+  }
   
-  // fetchAPI();
+  fetchAPI(request);
   return (
     <APIRequestContext.Provider 
-      value = {{
-        fetchRequest: "https://example.com/"
-      }}
+      value = {""}
     >
       {props.children}
     </APIRequestContext.Provider>
