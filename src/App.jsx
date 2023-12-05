@@ -6,18 +6,20 @@ import StockSearch from "./components/routes/StockSearch";
 import CompanyStockPage from "./components/routes/CompanyStockPage";
 import EndSummary from "./components/routes/EndSummary";
 
+import pages from "./models/pages";
+
 function App() {
-  const pages = ["Home", "Account Start", "Stock Search", "End Summary"];
   return (
     <div className="App">
-      <NavigationBar pages={pages} />
+      <NavigationBar />
       <BrowserRouter>
         <Routes>
           <Route index element={<HomePage />} />
-          <Route path="account" element={<Account />} />
-          <Route path="stocks" element={<StockSearch />} />
-          <Route path="stocks/*" element={<CompanyStockPage />} />
-          <Route path="summary" element={<EndSummary />} />
+          <Route path={pages.homePage.path} element={<HomePage />} />
+          <Route path={pages.accountPage.path} element={<Account />} />
+          <Route path={pages.stockSearchPage.path} element={<StockSearch />} />
+          <Route path={pages.stockSearchPage.path+"/*"} element={<CompanyStockPage />} />
+          <Route path={pages.summaryPage.path} element={<EndSummary />} />
         </Routes>
       </BrowserRouter>
     </div>

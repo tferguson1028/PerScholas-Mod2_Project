@@ -1,9 +1,15 @@
 import React from 'react'
+import pages from '../models/pages';
 
-function NavigationBar(props) {
+function NavigationBar() {
   return ( 
     <div className="NavigationBar">
-      { props.pages.map((page, index) => { return (<span key={index}>{page}</span>);})}
+      { 
+        Object.keys(pages).map(function(page, index) 
+        { 
+          return (<a key={index} href={pages[page].path}>{ pages[page].textContent }</a>);
+        })
+      }
     </div>
   )
 }
