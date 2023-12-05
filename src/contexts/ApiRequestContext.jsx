@@ -21,11 +21,17 @@ function ApiContextProvider(props)
     );
   }
   
-  async function fetchAPIData() 
+  async function fetchAPIData(request) 
   {
-    const result = await fetch(APIRequest);
-    const data = result.json();
-    return data;
+    try
+    {
+      const result = await fetch(request);
+      const data = result.json();
+      return data;
+    }catch(exception)
+    {
+      console.error("Unable to fetch!\n" + exception);
+    }
   }
   
   return (
