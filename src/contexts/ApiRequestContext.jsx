@@ -5,26 +5,35 @@ export const APIRequestContext = createContext();
 
 function ApiContextProvider(props) 
 {
-  const request = new Request(
-    `${uri}${path}`,
-    {
-      method: requestMethod,
-      headers: header,
-      body: body
-    }
-  );
-  const { apiRequest, setAPIRequest } = useState(request);
+  const [ APIRequest, setAPIRequest ] = useState(createAPIRequest());
+  const [ APIData, setAPIData ] = useState(fetchAPIData());
   
-  async function fetchAPI(request) 
+  function createAPIRequest()
   {
-    console.log(request);
-    console.log((await fetch(request)).json()); 
+    return new Request(
+      `${uri}${path}`,
+      {
+        method: requestMethod,
+        headers: header,
+        body: body
+      }
+    );
   }
   
-  fetchAPI(request);
+  async function fetchAPIData() 
+  {
+    const result = await fetch(APIRequest);
+    const data = result.json();
+    return data;
+  }
+  
   return (
     <APIRequestContext.Provider 
-      value = {""}
+      value = {{
+        APIData,
+        setAPIData,
+        fetchAPIData,
+      }}
     >
       {props.children}
     </APIRequestContext.Provider>
