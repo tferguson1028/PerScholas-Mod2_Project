@@ -15,9 +15,15 @@ User can:
 User can enter amounts of stock purchased 
 
 User Flow:
-- User makes account (account is fake)
-- User taken to home page
-- 
+- Arrive at home page
+- Make account (account is fake)
+- Set initial account balance
+- Return to home page
+- Search for company to invest in
+- Go to the company stock page
+- Enter date that user would've bought the stock and the amount
+- Go to summary page and enter ending date.
+- Receive calculation on change in account growth
 
 
 #### 3.
