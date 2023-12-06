@@ -1,32 +1,26 @@
 import React, { createContext, useState } from 'react';
-import { uri, path, requestMethod, header, body } from '../models/apiVariables';
+import { uri, path, requestMethod, header, body, apiURLFunctions } from '../models/apiVariables';
 
 export const APIRequestContext = createContext();
 
 function ApiContextProvider(props) 
 {
   const [ APIRequest, setAPIRequest ] = useState(createAPIRequest());
-  const [ APIData, setAPIData ] = useState(fetchAPIData(""));
+  const [ APIData, setAPIData ] = useState(fetchAPIData(APIRequest));
   
   function createAPIRequest()
   {
-    return null;
-    return new Request(
-      `${uri}${path}`,
-      {
-        method: requestMethod,
-        headers: header,
-        body: body
-      }
-    );
+    return apiURLFunctions.list(10);
   }
   
   async function fetchAPIData(request) 
   {
     try
     {
-      const result = await fetch(request);
-      const data = result.json();
+      console.log(request);
+      const result = await fetch(String(request));
+      const data = await result.json();
+      console.log(data);
       return data;
     }catch(exception)
     {
