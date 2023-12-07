@@ -18,7 +18,6 @@ function ApiContextProvider(props)
       const result = await fetch(String(request));
       const data = await result.json();
       console.log(data);
-      setAPIData(data);
       return data;
     }catch(exception)
     {
