@@ -22,11 +22,11 @@ function appendApiKey(apiKey, url)
 }
 
 const apiURLFunctions = {
-  base: (apiKey) => { return `${uri}/`; },
-  list: (apiKey, amount = defaultLimit) => { return `${uri}/${paths.list}limit=${amount}`; },
-  nameSearch: (apiKey, query, amount = defaultLimit) => { return `${uri}/${paths.search}query=${query}&limit=${amount}`; },
-  companyProfile: (apiKey, company) => { return `${uri}/${paths.company}/${company}/`; },
-  companyHistory: (apiKey, company, from, to) => { return null; }
+  base: () => { return `${uri}/`; },
+  list: (amount = defaultLimit) => { return `${uri}/${paths.list}limit=${amount}`; },
+  nameSearch: (query, amount = defaultLimit) => { return `${uri}/${paths.search}query=${query}&limit=${amount}`; },
+  companyProfile: (company) => { return `${uri}/${paths.company}/${company}/`; },
+  companyHistory: (company, from, to) => { return null; }
 }
 
 module.exports = { apiURLFunctions, appendApiKey };
