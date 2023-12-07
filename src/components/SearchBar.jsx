@@ -11,8 +11,10 @@ function SearchBar(props)
     setSearchTerm(event.target.value);
   }
   
-  function handleSubmit()
+  function handleSubmit(event)
   {
+    event.preventDefault();
+    console.log(`Initiating search with param: "${searchTerm}"`);
     dispatch(searchTerm);
   }
   
@@ -20,9 +22,9 @@ function SearchBar(props)
     <div className="SearchBar" >
       <form action="submit" onSubmit={handleSubmit}>
         <input type="text" name="searchBar" onChange={handleChange}/>
-        <input type="submit" value="">
+        <button type="submit">
           <Icon iconPath=""/>
-        </input>
+        </button>
       </form>
     </div>
   )

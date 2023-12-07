@@ -1,6 +1,6 @@
 import React, {useContext, useEffect, useState} from 'react'
 import SearchBar from '../SearchBar'
-import {APIRequestContext} from '../../contexts/ApiRequestContext';
+import { APIRequestContext } from '../../contexts/APIRequestContext';
 
 function StockSearch() 
 {
