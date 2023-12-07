@@ -14,7 +14,7 @@ const requestMethod = "GET";
 
 const defaultLimit = 10;
 
-function apiRequest(apiKey, url)
+function appendApiKey(apiKey, url)
 {
   // If the end of a passed url is a '?', it is the start of a query, else, add onto the query
   url = url.charAt(url.length-1) == "?" ? url : url+"&";
@@ -22,11 +22,11 @@ function apiRequest(apiKey, url)
 }
 
 const apiURLFunctions = {
-  base: (apiKey) => { return apiRequest(apiKey, `${uri}/`); },
-  list: (apiKey, amount = defaultLimit) => { return apiRequest(apiKey, `${uri}/${paths.list}limit=${amount}`); },
-  nameSearch: (apiKey, query, amount = defaultLimit) => { return apiRequest(apiKey, `${uri}/${paths.search}query=${query}&limit=${amount}`); },
-  companyProfile: (apiKey, company) => { return apiRequest(apiKey, `${uri}/${paths.company}/${company}/`)},
+  base: (apiKey) => { return `${uri}/`; },
+  list: (apiKey, amount = defaultLimit) => { return `${uri}/${paths.list}limit=${amount}`; },
+  nameSearch: (apiKey, query, amount = defaultLimit) => { return `${uri}/${paths.search}query=${query}&limit=${amount}`; },
+  companyProfile: (apiKey, company) => { return `${uri}/${paths.company}/${company}/`; },
   companyHistory: (apiKey, company, from, to) => { return null; }
 }
 
-module.exports = { apiURLFunctions };
+module.exports = { apiURLFunctions, appendApiKey };
