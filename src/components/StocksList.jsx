@@ -33,7 +33,7 @@ function StocksList(props)
   function loading()
   {
     return (
-      <h1>Loading</h1>
+      <span>Loading...</span>
     )
   }
   

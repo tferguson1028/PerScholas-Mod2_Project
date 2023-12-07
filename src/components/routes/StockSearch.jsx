@@ -8,6 +8,8 @@ function StockSearch()
 {
   const pageLimit = 10;
   const { APIData, setAPIData, fetchAPIData } = useContext(APIRequestContext);
+  
+  useEffect(() => { console.log("Initial List"); doSearch(""); }, []);
   useEffect(() => { console.log(`Attempting to populate data`)}, [APIData]);
   
   async function doSearch(searchTerm)

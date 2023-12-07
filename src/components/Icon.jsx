@@ -2,11 +2,11 @@ import React from 'react'
 
 function Icon(props) 
 {
-  const { iconPath = "#" } = props;
+  const { iconPath = "#", alt = "icon"} = props;
   return (
-    <div className='Icon'>
-      <img src={ iconPath } alt="Start Search"/>
-    </div>
+    <span className='Icon'>
+      <img src={ iconPath } alt={alt} />
+    </span>
   )
 }
 
