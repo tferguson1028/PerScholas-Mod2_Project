@@ -1,6 +1,8 @@
 import React from 'react'
 
-function Icon({ iconPath }) {
+function Icon(props) 
+{
+  const { iconPath = "#" } = props;
   return (
     <div className='Icon'>
       <img src={ iconPath } alt="Start Search"/>
