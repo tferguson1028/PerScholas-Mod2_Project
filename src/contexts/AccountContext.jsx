@@ -1,6 +1,6 @@
 import React, { createContext, useState } from 'react';
 
-const AccountContext = createContext();
+export const AccountContext = createContext();
 
 function AccountContextProvider(props) 
 {

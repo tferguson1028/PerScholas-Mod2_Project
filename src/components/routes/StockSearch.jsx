@@ -1,15 +1,22 @@
-import React from 'react'
+import React, {useContext, useEffect, useState} from 'react'
 import SearchBar from '../SearchBar'
+import {APIRequestContext} from '../../contexts/ApiRequestContext';
 
 function StockSearch() 
 {
-  
+  const APIData = useContext(APIRequestContext);
+  const [ searchTerm, setSearchTerm ] = useState("");
+  useEffect(() => 
+  {
+    
+  }
+  , [searchTerm]);
 
   return (
     <>
       <div className='PageHeader'>
         <h1>Search Tradable Stocks</h1>
-        <SearchBar />
+        <SearchBar dispatch={setSearchTerm}/>
       </div>
       <div className='SearchList'>
         {
