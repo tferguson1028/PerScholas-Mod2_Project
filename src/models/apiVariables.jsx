@@ -18,7 +18,7 @@ function appendApiKey(apiKey, url)
 {
   // If the end of a passed url is a '?', it is the start of a query, else, add onto the query
   url = url.charAt(url.length-1) == "?" ? url : url+"&";
-  return url + `apiKey=${apiKey}/`;
+  return url + `apikey=${apiKey}`;
 }
 
 const apiURLFunctions = {

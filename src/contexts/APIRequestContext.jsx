@@ -30,6 +30,7 @@ function ApiContextProvider(props)
     <APIRequestContext.Provider 
       value = {{
         APIData,
+        setAPIData,
         fetchAPIData
       }}
     >

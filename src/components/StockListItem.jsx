@@ -2,20 +2,23 @@ import React from 'react'
 import Clickable from './interfaces/Clickable';
 import Icon from './Icon';
 
-function StockSearchItem(props) 
+function StockListItem(props) 
 {
-  const { companyTag, companyName, stockPrice, linkDispatch} = props;
+  const { companyTag, companyName, stockPrice, linkPath} = props;
 
   return (
-    <Clickable dispatch={linkDispatch}>
+    <div>
+    {/* // <Clickable> */}
+      <h1>Section Test</h1>
       <div className='StockSearchItem'>
         <span className=''>{companyTag}</span>
         <span className=''>{companyName}</span>
         <span className=''>{stockPrice}</span>
         <Icon iconPath={""}/>
       </div>
-    </Clickable>
+    {/* // </Clickable> */}
+    </div>
   )
 }
 
-export default StockSearchItem
+export default StockListItem

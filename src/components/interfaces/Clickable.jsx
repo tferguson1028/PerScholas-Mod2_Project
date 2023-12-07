@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 
 function Clickable(props) {
   // https://blog.logrocket.com/complete-guide-react-default-props/
-  const { dispatch = () => {}, state = null, action = {action: null, payload: null}} = props;
+  const { children = <></>, dispatch = () => {}, state = null, action = {action: null, payload: null}} = props;
   return (
-    <div className="clickableContainer" style={{opacity: 0, position: "relative", width: "100%", height: "100%"}}>
+    <div className="ClickableContainer" style={{opacity: 0, position: "relative", width: "100%", height: "100%"}}>
       <button 
         onClick={() => {dispatch(state, action)}}
         style={{
@@ -17,6 +17,7 @@ function Clickable(props) {
           height: "100%"
         }}
       >
+        {props.children}
       </button>
     </div>
   )
