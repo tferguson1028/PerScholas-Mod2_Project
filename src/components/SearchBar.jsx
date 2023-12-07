@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import Icon from './Icon';
+import IconButton from './IconButton';
 
 function SearchBar(props) 
 {
@@ -22,9 +23,7 @@ function SearchBar(props)
     <div className="SearchBar" >
       <form action="submit" onSubmit={handleSubmit}>
         <input type="text" name="searchBar" onChange={handleChange}/>
-        <button type="submit">
-          <Icon iconPath=""/>
-        </button>
+        <IconButton type="submit" iconPath="#" />
       </form>
     </div>
   )
