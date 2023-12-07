@@ -1,5 +1,6 @@
 import React, { createContext, useState } from 'react';
 import { uri, path, requestMethod, header, body, apiURLFunctions } from '../models/apiVariables';
+import { apiKey } from '../models/apiKey';
 
 export const APIRequestContext = createContext();
 
@@ -10,7 +11,7 @@ function ApiContextProvider(props)
   
   function createAPIRequest()
   {
-    return apiURLFunctions.list(10);
+    return apiURLFunctions.list(apiKey, 10);
   }
   
   async function fetchAPIData(request) 
@@ -28,6 +29,7 @@ function ApiContextProvider(props)
     }
   }
   
+  console.log(APIRequest);
   return (
     <APIRequestContext.Provider 
       value = {{

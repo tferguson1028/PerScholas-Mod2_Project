@@ -3,7 +3,6 @@
  * To authorize your requests, add &apikey=YOUR_API_KEY at the end of every request.
 */
 const uri = "https://financialmodelingprep.com";
-const apiKey = "api";
 const paths = {
   list: "api/v3/available-traded/list?",
   search: "api/v3/search?",
@@ -15,19 +14,19 @@ const requestMethod = "GET";
 
 const defaultLimit = 10;
 
-function apiRequest(url)
+function apiRequest(apiKey, url)
 {
   // If the end of a passed url is a '?', it is the start of a query, else, add onto the query
   url = url.charAt(url.length-1) == "?" ? url : url+"&";
-  return url + `apiKay=${apiKey}/`;
+  return url + `apiKey=${apiKey}/`;
 }
 
 const apiURLFunctions = {
-  base: () => { return apiRequest(`${uri}/`); },
-  list: (amount = defaultLimit) => { return apiRequest(`${uri}/${paths.list}limit=${amount}`); },
-  nameSearch: (query, amount = defaultLimit) => { return apiRequest(`${uri}/${paths.search}query=${query}&limit=${amount}`); },
-  companyProfile: (company) => { return apiRequest(`${uri}/${paths.company}/${company}/`)},
-  companyHistory: (company, from, to) => { return null; }
+  base: (apiKey) => { return apiRequest(apiKey, `${uri}/`); },
+  list: (apiKey, amount = defaultLimit) => { return apiRequest(apiKey, `${uri}/${paths.list}limit=${amount}`); },
+  nameSearch: (apiKey, query, amount = defaultLimit) => { return apiRequest(apiKey, `${uri}/${paths.search}query=${query}&limit=${amount}`); },
+  companyProfile: (apiKey, company) => { return apiRequest(apiKey, `${uri}/${paths.company}/${company}/`)},
+  companyHistory: (apiKey, company, from, to) => { return null; }
 }
 
 module.exports = { apiURLFunctions };
