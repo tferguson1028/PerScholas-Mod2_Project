@@ -6,10 +6,11 @@ const uri = "https://financialmodelingprep.com";
 const paths = {
   list: "api/v3/symbol/NYSE?",
   search: "api/v3/search?",
-  company: "api/v3/profile"
+  company: "api/v3/profile",
+  history: "api/v3/historical-price-full"
 }
 
-const stockExchange = "NASDAQ";
+const stockExchange = "NYSE"; // Only one available with fre plan
 const requestMethod = "GET";
 
 const defaultLimit = 10;
@@ -27,7 +28,7 @@ const apiURLFunctions = {
   list: (amount = defaultLimit) => { return `${uri}/${paths.list}limit=${amount}`; },
   nameSearch: (query, amount = defaultLimit) => { return `${uri}/${paths.search}query=${query}&limit=${amount}`; },
   companyProfile: (company) => { return `${uri}/${paths.company}/${company}?`; },
-  companyHistory: (company, from, to) => { return null; }
+  companyStockHistory: (company) =>  { return `${uri}/${paths.history}/${company}?`; }
 }
 
 module.exports = { apiURLFunctions, appendApiKey };
