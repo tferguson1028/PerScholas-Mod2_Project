@@ -19,10 +19,20 @@ function StockSearch()
     if(searchTerm === "" || typeof searchTerm === "undefined")
     {
       console.log(`searchTerm is empty. Fetching default list using term`);
-      data = await fetchAPIData(apiURLFunctions.list(pageLimit))
+      data = await fetchAPIData(apiURLFunctions.list(pageLimit));
       
-      let index = Math.max(0, Math.floor(Math.random(data.length)-pageLimit), pageLimit);
-      retData = [...data].splice(index, pageLimit);
+      let numEl = data.length;
+      let mem = [];
+      for(let i = 0; i < pageLimit; i++)
+      {
+        let index = Math.max(0, Math.floor(Math.random()*data.length-pageLimit));
+        if(mem.indexOf(index) === -1)
+        {
+          mem.push(index);
+          retData.push(data[index]);
+        }else
+          i--;
+      }
     }else
     {
       console.log(`searchTerm set to "${searchTerm}". Fetching list using term`);

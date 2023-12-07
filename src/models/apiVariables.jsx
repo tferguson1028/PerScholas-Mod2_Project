@@ -4,7 +4,7 @@
 */
 const uri = "https://financialmodelingprep.com";
 const paths = {
-  list: "api/v3/available-traded/list?",
+  list: "api/v3/symbol/NYSE?",
   search: "api/v3/search?",
   company: "api/v3/profile"
 }
