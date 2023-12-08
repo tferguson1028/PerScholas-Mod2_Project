@@ -1,6 +1,49 @@
 :root
 {
   --defaultFont: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  
+  /* https://color.adobe.com/create/color-wheel */
+  --color-Primary-500: #2BF0AE;
+  --color-Primary-400: #25CC94;
+  --color-Primary-300: #1DA377;
+  --color-Primary-200: #167A59;
+  --color-Primary-100: #0F523B;
+  
+  --color-Secondary-500: #622BF0;
+  --color-Secondary-400: #6948BD;
+  --color-Secondary-300: #60508A;
+  --color-Secondary-200: #494457;
+  --color-Secondary-100: #2C2A33;
+  
+  --color-Warning: #F0742B;
+  --color-Error: #F0302B;
+
+  --color-Brown-500: #F0C0A3;
+  --color-Brown-400: #C7A087;
+  --color-Brown-300: #9E7F6C;
+  --color-Brown-200: #705A4C;
+  --color-Brown-100: #4D3D34;
+  
+  /* https://maketintsandshades.com/#181629 */
+  --colorWhite-500: #ffffff;
+  --colorWhite-400: #e8e8ea;
+  --colorWhite-300: #d1d0d4;
+  --colorWhite-200: #bab9bf;
+  --colorWhite-100: #a3a2a9;
+  
+  --colorGrey-500: #8c8b94;
+  --colorGrey-400: #74737f;
+  --colorGrey-300: #5d5c69;
+  --colorGrey-200: #464554;
+  --colorGrey-100: #2f2d3e;
+  
+  --colorBlack-700: #181629;
+  --colorBlack-600: #161425;
+  --colorBlack-500: #131221;
+  --colorBlack-400: #110f1d;
+  --colorBlack-300: #0e0d19;
+  --colorBlack-200: #0a0910;
+  --colorBlack-100: #020204;
 }
 
 body
