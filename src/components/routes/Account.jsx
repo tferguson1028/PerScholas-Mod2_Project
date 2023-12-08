@@ -1,9 +1,12 @@
-import React, {useContext} from 'react';
+import React, {useContext, useEffect, useState} from 'react';
 import { AccountContext } from '../../contexts/AccountContext';
 
 function Account() {
-  const accountLoggedIn = useContext(AccountContext);
-
+  const { accountLoggedIn, setAccountLoggedIn } = useContext(AccountContext);
+  
+  // const [ loginStatus, setLoginStatus ] = useState();
+  useEffect(() => {}, [accountLoggedIn]);
+  
   function loggedIn()
   {
     return (
@@ -17,6 +20,7 @@ function Account() {
           <span></span>
           <span></span>
         </div>
+        <button onClick={() => {setAccountLoggedIn(false)}}>Log Out</button>
       </>
     );
   }
@@ -25,12 +29,13 @@ function Account() {
   {
     return (
       <>
-        <a href="account/signup"><button>Sign Up</button></a>
-        <a href="account/login"><button>Log In</button></a>
+        <a href="/account/signup"><button>Sign Up</button></a>
+        <a href="/account/login"><button>Log In</button></a>
       </>
     );
   }
-
+  
+  console.log(accountLoggedIn);
   return accountLoggedIn ? loggedIn() : loggedOut();
 }
 

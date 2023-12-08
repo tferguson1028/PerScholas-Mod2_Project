@@ -4,16 +4,28 @@ export const AccountContext = createContext();
 
 function AccountContextProvider(props) 
 {
-  const [ accountLoggedIn, setAccountLoggedIn ] = useState(false);
+  const [ accountLoggedIn, setAccountLoggedIn ] = useState();
   
-  function loginDispatch(username, password)
+  async function loginDispatch(username, password)
   {
-    setAccountLoggedIn(true);
+    await setAccountLoggedIn(true);
+    setTimeout(() => {
+      // https://stackoverflow.com/questions/52229901/navigate-to-route-on-button-click
+      // https://stackoverflow.com/questions/1368264/how-to-extract-the-hostname-portion-of-a-url-in-javascript
+      let root = window.location.protocol + "//" + window.location.host;
+      window.location.assign(`${root}/account`);
+    }, 1000);    
+    
+    // localStorage.setItem("loginStatus", accountLoggedIn);
+    // console.log(accountLoggedIn);
   }
   
   return (
     <AccountContext.Provider 
-      value = {{ accountLoggedIn, loginDispatch }}
+      value = {{ 
+        accountLoggedIn, 
+        setAccountLoggedIn, 
+        loginDispatch }}
     >
       {props.children}
     </AccountContext.Provider>
