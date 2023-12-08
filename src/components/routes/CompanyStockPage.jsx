@@ -31,7 +31,9 @@ function CompanyStockPage()
   {
     if(accountLoggedIn)
     {
-      localStorage.setItem("");
+      let stack = localStorage.getItem("accountCompanyStack");
+      stack.push(companyData);
+      localStorage.setItem("accountCompanyStack", [...stack]);
     }      
     else
     {

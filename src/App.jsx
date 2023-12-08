@@ -18,9 +18,9 @@ function App()
   // Setting default localStorage params.
   function setupLocalStorage()
   {
-    if(localStorage.getItem(""))
+    if(!localStorage.getItem("accountCompanyStack"))
     {
-    
+      localStorage.setItem("accountCompanyStack", []);
     }
   }
 
