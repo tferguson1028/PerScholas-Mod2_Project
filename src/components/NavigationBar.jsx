@@ -7,7 +7,7 @@ function NavigationBar() {
       { 
         Object.keys(pages).map(function(page, index) 
         { 
-          return (<a key={index} href={pages[page].path}>{ pages[page].textContent }</a>);
+          return (<a key={index} href={"/"+pages[page].path}>{ pages[page].textContent }</a>);
         })
       }
     </div>
