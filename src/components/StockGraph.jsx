@@ -14,14 +14,17 @@ function StockGraph(props)
   
   useEffect(() => { fetchGraphData(); }, []);
   useEffect(() => { generateGraphData(); }, [stockData]);
+  useEffect(() => {}, [stockGraph]);
   
   async function fetchGraphData()
   {
     setStockData(await fetchAPIData(apiURLFunctions.companyStockHistory(companySymbol)));
   }
   
-  async function generateGraphData()
+  function generateGraphData()
   {
+    if(!stockData)  return;
+    
     const stockHistoryArr = stockData["historical"];
     const data = [];
     for(let i = 0; i < historyLimit; i++)
@@ -35,13 +38,14 @@ function StockGraph(props)
     setStockGraph(generateGraphURL(data));
   }
   
-  function loaded()
+  function loaded(imageLink)
   {
+    console.log(stockData);
     console.log(stockGraph);
     return  (
-      <div className='StockGraph'>
-        <img src={stockGraph} alt="" />  
-      </div>
+      // <div className='StockGraph'>
+        <img src={"https://"+stockGraph} alt="" />  
+      // </div>
     )
   }
   

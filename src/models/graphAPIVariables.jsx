@@ -30,7 +30,7 @@ function generateGraphURL(dataPointsArr)
   // https://stackoverflow.com/questions/6807180/how-to-escape-a-json-string-to-have-it-in-a-url
   let retURL = baseUrl+encodeURIComponent((JSON.stringify(graphData)));
   console.log(retURL);
-  return retURL;
+  return String(retURL);
 }
 
 module.exports = { generateGraph: generateGraphURL };
