@@ -7,6 +7,13 @@ import ApiContextProvider from './contexts/APIRequestContext';
 import App from './App';
 import AccountContextProvider from './contexts/AccountContext';
 
+// Styles
+import "./styles/BaseStyle.css";
+import "./styles/Responsive.css";
+import "./styles/NavBar.css";
+import "./styles/MainPage.css";
+
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
