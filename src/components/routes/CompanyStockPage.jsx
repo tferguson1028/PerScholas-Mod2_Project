@@ -3,11 +3,13 @@ import {AccountContext} from '../../contexts/AccountContext';
 import {APIRequestContext} from '../../contexts/APIRequestContext';
 import {apiURLFunctions} from '../../models/apiVariables';
 import pages from '../../models/pages';
+import StockGraph from '../StockGraph';
 
 function CompanyStockPage() 
 {
   const [ companySymbol, setCompanySymbol ] = useState();
   const [ companyData, setCompanyData ] = useState();
+  const [ stockGraph, setStockGraph ] = useState();
   const { fetchAPIData } = useContext(APIRequestContext);
   const { accountLoggedIn } = useContext(AccountContext);
   
@@ -46,36 +48,74 @@ function CompanyStockPage()
   
   function loaded()
   {
+    const data = companyData[0]; // API returns array of length 1.
     if (Array(companyData).length == 0)
       return noCompanyError();
     else
       return (
         <>
-          <div className='TextTitle'>Company Title</div>
+          <div className='TextTitle'>{data.companyName}</div>
           <header>
-            <div className="CompanyLogo">Logo</div>
-            <h2 className='CompanySymbol'>SYBL</h2>
-            <h2 className='CompanyName'>Symbol</h2>
-            <div className='WebsiteLink'>Website</div>
+            <div className="CompanyLogo">
+              <img src={data.image} alt="#" />
+            </div>
+            <h2 className='CompanySymbol'>{data.symbol}</h2>
+            <h2 className='CompanyName'>{data.companyName}</h2>
+            <div className='StockSummary'>
+              <span className='CurrentPrice'>
+                <span className='title'>Current Price</span>
+                <span className='content'>{data.price} {data.currency}</span>
+              </span>
+              <span className='Changes'>
+                <span className='title'>Recent Price Change</span>
+                <span className='content'>{data.changes}</span>
+              </span>
+            </div>
+            <div className='WebsiteLink'>{data.website}</div>
           </header>
           
-          <div className='Graph'>Stock Graph</div>
+          <StockGraph companySymbol={data.symbol} />
+          
           <section className='FinancialInfo'>
             <h1>Financial Information</h1>
-            <span className='CurrentPrice'>Price w/ Currency</span>
-            <span className='Range'>Range</span>
-            <span className='Changes'>Recent Changes</span>
-            <span className='Market Cap'>Market Cap</span>
+            <span className='CurrentPrice'>
+              <span className='title'>Current Price</span>
+              <span className='content'>{data.price} {data.currency}</span>
+            </span>
+            <span className='Range'>
+              <span className='title'>Price Range</span>
+              <span className='content'>{data.range}</span>
+            </span>
+            <span className='Changes'>
+              <span className='title'>Recent Price Change</span>
+              <span className='content'>{data.changes}</span>
+            </span>
+            <span className='Market Cap'>
+              <span className='title'>Market Cap</span>
+              <span className='content'>{data.mktCap} {data.currency}</span>
+            </span>
           </section>
           <button onClick={addDataToStorage}>Add for analysis</button>
           
           <section className='CompanyInfo'>
             <h1>Company Information</h1>
-            <span className='Industry'>Industry</span>
-            <span className='Location'>Location</span>
-            <span className=''></span>
-            <span className=''></span>
-            <p className='Description'>Description</p>
+            <span className='Industry'>
+              <span className='title'>Industry</span>
+              <span className='content'>{data.industry}</span>
+            </span>
+            <span className='Location'>
+              <span className='title'>Location</span>
+              <span className='content'>{data.city}, {data.state}. {data.country}</span>
+            </span>
+            <span className=''>
+              <span className='title'>Employees</span>
+              <span className='content'>{data.fullTimeEmployees}</span>
+            </span>
+            <span className=''>
+              <span className='title'>Initial Public Offering Data</span>
+              <span className='content'>{data.ipodate}</span>
+            </span>
+            <p className='Description'>{data.description}</p>
           </section>
         </>
     )
@@ -92,7 +132,7 @@ function CompanyStockPage()
   {
     return (
       <>
-        <span className='TextTitle'>Loading Company Information</span>
+        <span className='TextTitle'>Loading Company Information...</span>
       </>
     )
   }
