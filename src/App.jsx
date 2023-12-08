@@ -11,9 +11,18 @@ import CompanyStockPage from "./components/routes/CompanyStockPage";
 import EndSummary from "./components/routes/EndSummary";
 
 import pages from "./models/pages";
+import {useEffect} from "react";
 
 function App() 
 {
+  // Setting default localStorage params.
+  function setupLocalStorage()
+  {
+    if(localStorage.getItem(""))
+  }
+
+  useEffect(() => {setupLocalStorage}, []);
+
   return (
     <div className="App">
       <NavigationBar />

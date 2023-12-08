@@ -1,12 +1,15 @@
 import React, {useContext, useEffect, useState} from 'react'
+import {AccountContext} from '../../contexts/AccountContext';
 import {APIRequestContext} from '../../contexts/APIRequestContext';
 import {apiURLFunctions} from '../../models/apiVariables';
+import pages from '../../models/pages';
 
 function CompanyStockPage() 
 {
   const [ companySymbol, setCompanySymbol ] = useState();
   const [ companyData, setCompanyData ] = useState();
   const { fetchAPIData } = useContext(APIRequestContext);
+  const { accountLoggedIn } = useContext(AccountContext);
   
   useEffect(() => {getCompanyPageRef();}, []);
   useEffect(() => {}, [companyData]);
@@ -22,6 +25,21 @@ function CompanyStockPage()
     setCompanySymbol(currentCompany);
     setCompanyData(await fetchAPIData(apiURLFunctions.companyProfile(currentCompany)));
     return currentCompany;
+  }
+  
+  function addDataToStorage()
+  {
+    if(accountLoggedIn)
+    {
+      localStorage.setItem("");
+    }      
+    else
+    {
+      // https://stackoverflow.com/questions/52229901/navigate-to-route-on-button-click
+      //https://stackoverflow.com/questions/1368264/how-to-extract-the-hostname-portion-of-a-url-in-javascript
+      let root = window.location.protocol + "//" + window.location.host;
+      window.location.assign(`${root}/${pages.accountPage.path}`)
+    }
   }
   
   function loaded()
@@ -47,7 +65,7 @@ function CompanyStockPage()
             <span className='Changes'>Recent Changes</span>
             <span className='Market Cap'>Market Cap</span>
           </section>
-          <button>Add for analysis</button>
+          <button onClick={addDataToStorage}>Add for analysis</button>
           
           <section className='CompanyInfo'>
             <h1>Company Information</h1>
