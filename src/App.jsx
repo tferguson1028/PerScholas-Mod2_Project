@@ -19,9 +19,12 @@ function App()
   function setupLocalStorage()
   {
     if(localStorage.getItem(""))
+    {
+    
+    }
   }
 
-  useEffect(() => {setupLocalStorage}, []);
+  useEffect(() => {setupLocalStorage()}, []);
 
   return (
     <div className="App">
