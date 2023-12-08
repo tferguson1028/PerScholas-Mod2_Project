@@ -1,5 +1,5 @@
-const baseUrl = "https://image-charts.com/chart.js/2.8.0?c=";
-async function generateGraph(dataPointsArr)
+const baseUrl = "image-charts.com/chart.js/2.8.0?c=";
+function generateGraphURL(dataPointsArr)
 {
   let graphData = {
     "type": "line",
@@ -23,10 +23,14 @@ async function generateGraph(dataPointsArr)
 
   for(let dataPointPair of dataPointsArr)
   {
-    graphData.data.datasets.data.push(dataPointPair.point);
+    graphData.data.datasets[0].data.push(dataPointPair.point);
     graphData.data.labels.push(dataPointPair.label);
   }
-  return baseUrl + JSON.stringify(graphData);
+  
+  // https://stackoverflow.com/questions/6807180/how-to-escape-a-json-string-to-have-it-in-a-url
+  let retURL = baseUrl+encodeURIComponent((JSON.stringify(graphData)));
+  console.log(retURL);
+  return retURL;
 }
 
-module.exports = { generateGraph };
+module.exports = { generateGraph: generateGraphURL };

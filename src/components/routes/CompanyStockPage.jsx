@@ -9,7 +9,6 @@ function CompanyStockPage()
 {
   const [ companySymbol, setCompanySymbol ] = useState();
   const [ companyData, setCompanyData ] = useState();
-  const [ stockGraph, setStockGraph ] = useState();
   const { fetchAPIData } = useContext(APIRequestContext);
   const { accountLoggedIn } = useContext(AccountContext);
   
