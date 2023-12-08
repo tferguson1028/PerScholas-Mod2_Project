@@ -10,7 +10,9 @@ function generateGraphURL(dataPointsArr)
           "label": "Dataset 1",
           "backgroundColor": "#4EC5F155",
           "borderColor": "#4EC5F1",
-          "borderWidth": 1,
+          "borderWidth": 3,
+          "pointRadius": 0,
+          "lineTension": 0.6,
           "data": []
         }
       ]
