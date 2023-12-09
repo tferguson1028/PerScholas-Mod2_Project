@@ -13,6 +13,8 @@
   display: flex;
   flex-direction: row;
   align-items: center;
+  
+  z-index: 100 !important;
 }
 
 .NavigationBar > *
@@ -32,12 +34,12 @@
 
 .NavigationBar > h1
 {
-  padding-left: 10%;
+  margin-left: 5vw;
 }
 
 .NavButtonGroup
 {
-  flex: 2;
+  flex: 1;
   display: flex;
   flex-direction: row;
   
@@ -48,10 +50,13 @@
 .NavButton
 {
   flex: 1;
-  height: 100%;
+    
   color: var(--color-White-400);
   background-color: var(--color-Black-100);
+  height: 100%;
+  padding: 16px;
   
+  white-space: nowrap;
   font-weight: bold;
   text-decoration: none;
   

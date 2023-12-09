@@ -1,0 +1,6 @@
+main
+{  
+  background-color: var(--color-Brown-500);
+  display: flex;
+  flex-direction: column;
+}

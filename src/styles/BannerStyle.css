@@ -1,0 +1,15 @@
+.Banner
+{
+  width: 100% !important;
+  height: 40ex !important;
+  margin: 0 !important;
+  
+  display: grid;
+  grid-template-columns: 30% 30% 30%;
+  justify-content: space-between;
+}
+
+.BannerSection_0
+{
+  
+}
