@@ -5,8 +5,14 @@
   margin: 0 !important;
   
   display: grid;
-  grid-template-columns: 30% 30% 30%;
+  
+  grid-auto-flow: column;
+  grid-template-rows: repeat(3, 30%);
+  
+  align-content: space-between;
   justify-content: space-between;
+  
+  padding: 24px;
 }
 
 .BannerSection_0

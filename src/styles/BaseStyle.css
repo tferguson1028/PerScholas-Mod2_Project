@@ -65,6 +65,8 @@ body *
   position: relative;
   box-sizing: border-box;
   transition: 0.12s ease-out;
+  
+  font-family: var(--defaultFont);
 }
 
 body * { font-size: 12pt;}
@@ -77,4 +79,4 @@ h6 { font-size: 14pt; }
 
 
 main > * { padding: 12px; margin: 0 8px; }
-main > *.Banner, main > *.Carousel { padding: 0; margin: 0; }
+main > *.Banner, main > *.Carousel { margin: 0; }

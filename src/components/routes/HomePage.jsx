@@ -5,8 +5,10 @@ import Carousel from '../interfaces/Carousel'
 function HomePage() {
   return (
     <>
-      <div className='Header'>HomePage</div>
-      <Banner>HomeBanner</Banner>
+      <Banner className="quop">
+        <div className='Header'>HomePage</div>
+        HomeBanner
+      </Banner>
       <Carousel>
         <Banner>
           <h2>GridTest0_0</h2>
