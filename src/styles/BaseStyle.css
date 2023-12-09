@@ -1,3 +1,8 @@
+/* 
+  Using design as reference
+  https://www.sketchappsources.com/free-source/4839-web-template-sketch-freebie-resource.html
+*/
+
 :root
 {
   --defaultFont: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -25,25 +30,25 @@
   --color-Brown-100: #4D3D34;
   
   /* https://maketintsandshades.com/#181629 */
-  --colorWhite-500: #ffffff;
-  --colorWhite-400: #e8e8ea;
-  --colorWhite-300: #d1d0d4;
-  --colorWhite-200: #bab9bf;
-  --colorWhite-100: #a3a2a9;
+  --color-White-500: #ffffff;
+  --color-White-400: #e8e8ea;
+  --color-White-300: #d1d0d4;
+  --color-White-200: #bab9bf;
+  --color-White-100: #a3a2a9;
   
-  --colorGrey-500: #8c8b94;
-  --colorGrey-400: #74737f;
-  --colorGrey-300: #5d5c69;
-  --colorGrey-200: #464554;
-  --colorGrey-100: #2f2d3e;
+  --color-Grey-500: #8c8b94;
+  --color-Grey-400: #74737f;
+  --color-Grey-300: #5d5c69;
+  --color-Grey-200: #464554;
+  --color-Grey-100: #2f2d3e;
   
-  --colorBlack-700: #181629;
-  --colorBlack-600: #161425;
-  --colorBlack-500: #131221;
-  --colorBlack-400: #110f1d;
-  --colorBlack-300: #0e0d19;
-  --colorBlack-200: #0a0910;
-  --colorBlack-100: #020204;
+  --color-Black-700: #181629;
+  --color-Black-600: #161425;
+  --color-Black-500: #131221;
+  --color-Black-400: #110f1d;
+  --color-Black-300: #0e0d19;
+  --color-Black-200: #0a0910;
+  --color-Black-100: #020204;
 }
 
 body
@@ -57,10 +62,19 @@ body
 
 body *
 {
+  position: relative;
   box-sizing: border-box;
+  transition: 0.12s ease-out;
 }
 
-#root
-{
-  padding: 2px;
-}
+body * { font-size: 12pt;}
+h1 { font-size: 22pt; }
+h2 { font-size: 20pt; }
+h3 { font-size: 18pt; }
+h4 { font-size: 17pt; }
+h5 { font-size: 16pt; }
+h6 { font-size: 14pt; }
+
+
+main > * { padding: 12px; margin: 0 8px; }
+main > *.Banner, main > *.Carousel { padding: 0; margin: 0; }

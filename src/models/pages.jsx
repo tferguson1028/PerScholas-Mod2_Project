@@ -5,7 +5,7 @@ const pages = {
     signup: { textContent: "Sign Up", path: "signup" }
   }},
   stockSearchPage: { textContent: "Stock Search", path: "stocks"},
-  summaryPage: { textContent: "End Date Summary", path: "summary"}
+  summaryPage: { textContent: "Summary", path: "summary"}
 };
 
 module.exports = pages;

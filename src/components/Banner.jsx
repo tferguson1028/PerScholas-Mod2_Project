@@ -2,7 +2,7 @@ import React from 'react'
 
 function Banner(props) {
   return (
-    <div>{props.children}</div>
+    <div className='Banner'>{props.children}</div>
   )
 }
 

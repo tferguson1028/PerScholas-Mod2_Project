@@ -1,27 +1,68 @@
 .NavigationBar
 {
+  position: sticky;
+  top: 0;
+  
+  color: var(--color-White-500);
+  background-color: var(--color-Black-100);
+  border-bottom: 3px solid var(--color-Primary-500);
+  
   width: 100%;
+  height: 64px;
+  
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
-  border: 2px solid aquamarine;
 }
 
-.NavigationBar > * 
+.NavigationBar > *
 {
   flex: 1;
-  text-align: center;
-
   display: flex;
   flex-direction: row;
+  align-items: center;
+}
+
+.NavigationBar > *
+{
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.NavigationBar > h1
+{
+  padding-left: 10%;
+}
+
+.NavButtonGroup
+{
+  flex: 2;
+  display: flex;
+  flex-direction: row;
+  
   align-items: center;
   justify-content: center;
 }
 
-.NavigationBar > * > *
+.NavButton
 {
   flex: 1;
-  text-align: center;
+  height: 100%;
+  color: var(--color-White-400);
+  background-color: var(--color-Black-100);
+  
+  font-weight: bold;
+  text-decoration: none;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
 }
 
+.NavButton:hover
+{
+  color: var(--color-White-500);
+  background-color: var(--color-Primary-500);
+}
