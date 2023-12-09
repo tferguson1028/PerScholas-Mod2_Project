@@ -1,8 +1,15 @@
 import React from 'react'
 
-function Banner(props) {
+function Banner(props) 
+{
+  const { className = "", backgroundImage = ""} = props;
   return (
-    <div className={`Banner ${props.className ? props.className : ""}`.trim()}>{props.children}</div>
+    <div 
+      className={`Banner ${className ? className : ""}`.trim()}
+      style={{backgroundImage: `url(${backgroundImage}`}}
+    >  
+      {props.children}
+    </div>
   )
 }
 
