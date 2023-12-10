@@ -21,7 +21,7 @@ function HomePage() {
           {/* <h2>GridTest0_4</h2> */}
           {/* <h2>GridTest0_5</h2> */}
         </Banner>
-        <Banner>
+        <Banner backgroundImage={images.stocks1}>
           <h3>GridTest1_0</h3>
           <h3>GridTest1_1</h3>
           <h3>GridTest1_2</h3>
