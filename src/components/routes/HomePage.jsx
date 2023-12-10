@@ -1,6 +1,7 @@
 import React from 'react'
 import Banner from '../Banner'
 import Carousel from '../interfaces/Carousel'
+import { images } from '../../models/assetPaths'
 
 function HomePage() {
   return (
@@ -10,7 +11,7 @@ function HomePage() {
         HomeBanner
       </Banner>
       <Carousel>
-        <Banner>
+        <Banner backgroundImage={images.stocks0}>
           <h2>Welcome!</h2>
           <span className='Spacer'></span>
           <h2>GridTest0_1</h2>
