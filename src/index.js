@@ -17,6 +17,7 @@ import "./styles/CarouselStyle.css";
 
 import "./styles/MainPage.css";
 import "./styles/StockListStyle.css";
+import "./styles/CompanyPageStyle.css";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

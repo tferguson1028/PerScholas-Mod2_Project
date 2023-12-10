@@ -54,23 +54,25 @@ function CompanyStockPage()
       return (
         <>
           <div className='TextTitle'>{data.companyName}</div>
-          <header>
-            <div className="CompanyLogo">
-              <img src={data.image} alt="#" />
+          <header className='StockHeader'>
+            <div className='CompanyHead'>
+              <div className="CompanyLogo">
+                <img src={data.image} alt="#" />
+              </div>
+              <h2 className='CompanySymbol'>{data.symbol}</h2>
+              <h2 className='CompanyName'>{data.companyName}</h2>
             </div>
-            <h2 className='CompanySymbol'>{data.symbol}</h2>
-            <h2 className='CompanyName'>{data.companyName}</h2>
+            <div className='WebsiteLink'><a href={data.website}>{data.website}</a></div>
             <div className='StockSummary'>
               <span className='CurrentPrice'>
-                <span className='title'>Current Price</span>
+                <span className='title'>Current Price:</span>
                 <span className='content'>{data.price} {data.currency}</span>
               </span>
               <span className='Changes'>
-                <span className='title'>Recent Price Change</span>
+                <span className='title'>Recent Price Change:</span>
                 <span className='content'>{data.changes}</span>
               </span>
             </div>
-            <div className='WebsiteLink'>{data.website}</div>
           </header>
           
           <StockGraph companySymbol={data.symbol} />
