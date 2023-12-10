@@ -27,7 +27,7 @@ function StockGraph(props)
     
     const stockHistoryArr = stockData["historical"];
     const data = [];
-    for(let i = 0; i < historyLimit; i++)
+    for(let i = 0; i*historyInterval < Math.min(historyLimit, stockHistoryArr.length); i++)
     {
       let time = stockHistoryArr[i*historyInterval]["label"];
       let price = stockHistoryArr[i*historyInterval]["close"];
