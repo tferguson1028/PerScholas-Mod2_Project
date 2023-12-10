@@ -1,0 +1,20 @@
+button
+{
+  background-color: var(--color-Primary-500);
+  border: 0;
+  box-shadow: 0 0px 2px var(--color-Primary-400);
+  color: var(--color-Black-200);
+  
+  font-size: 13pt;
+  
+  border-radius: 4px;
+  
+  font-weight: bold;  
+  padding: 12px 24px !important;
+}
+
+button:hover
+{
+  background-color: var(--color-Primary-300);
+  color: var(--color-Black-300);
+}

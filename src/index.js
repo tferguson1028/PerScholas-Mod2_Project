@@ -12,6 +12,7 @@ import "./styles/BaseStyle.css";
 import "./styles/Responsive.css";
 import "./styles/NavBar.css";
 import "./styles/MainPage.css";
+import "./styles/ButtonStyle.css";
 import "./styles/BannerStyle.css";
 import "./styles/CarouselStyle.css";
 

@@ -45,10 +45,9 @@ function Carousel(props)
         <div className='CarouselItem_Center'>{props.children[currentChild]}</div>
         <div className='CarouselItem_Right'>{props.children[loopNumber(currentChild+1, numChildren)]}</div>
       </div>
-      <div className='CarouselButtons'>
-        <button onClick={() => handleClick(false)}><Icon iconPath = {icons.caret_left} alt="Cycle Left"/></button>
-        <button onClick={() => handleClick(true)}><Icon iconPath = {icons.caret_right} alt="Cycle Right"/></button>
-      </div>
+      <button onClick={() => handleClick(false)}><Icon iconPath = {icons.caret_left} alt="Cycle Left"/></button>
+      <button onClick={() => handleClick(true)}><Icon iconPath = {icons.caret_right} alt="Cycle Right"/></button>
+
       {/* This is needed so onLoad fires https://www.reddit.com/r/learnreactjs/comments/gv24ae/onload_event_not_firing_on_conditional_render/*/}
       <img src={images.stocks0} alt="" style={{display: "none"}}/> 
     </section>
