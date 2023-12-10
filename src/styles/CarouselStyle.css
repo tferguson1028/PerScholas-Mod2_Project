@@ -27,6 +27,7 @@
 {
   padding: 12px 72px !important;
   justify-content: center;
+  color: var(--color-White-500);
 }
 
 .CarouselItems > * > *::before
@@ -40,7 +41,7 @@
   left: 0;
   
   background-color: black;
-  opacity: 0.2;
+  opacity: 0.7;
   
   z-index: 0;
 }
