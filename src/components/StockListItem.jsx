@@ -8,12 +8,13 @@ function StockListItem(props)
   
   return (
     <a className='StockListItem' href={linkPath}>
-      <button className='StockSearchItem' >
+      {/* <button className='StockSearchItem' > */}
         <span className=''>{companyTag}</span>
         <span className=''>{companyName}</span>
+        <span className=''>Stock Price</span>
         <span className=''>{stockPrice}</span>
         <Icon iconPath={icons.caret_right}/>
-      </button>
+      {/* </button> */}
     </a>
   )
 }

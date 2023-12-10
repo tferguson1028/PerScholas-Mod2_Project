@@ -6,7 +6,7 @@ import StocksList from '../StocksList';
 
 function StockSearch() 
 {
-  const pageLimit = 10;
+  const pageLimit = 30;
   const { APIData, setAPIData, fetchAPIData } = useContext(APIRequestContext);
   
   useEffect(() => { console.log("Initial List"); doSearch(""); }, []);
