@@ -26,6 +26,7 @@
 .CarouselItems > * > *
 {
   padding: 12px 72px !important;
+  justify-content: center;
 }
 
 .CarouselItems > * > *::before
