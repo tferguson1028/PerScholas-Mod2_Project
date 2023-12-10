@@ -12,16 +12,15 @@ function HomePage() {
       </Banner>
       <Carousel>
         <Banner backgroundImage={images.stocks0}>
-          <span className='Spacer'></span>
-          <h1>Stock Project</h1>
-          <span className='Spacer'></span>
+          <h1 style={{gridRow: "1 / 2", gridColumn: "1 / 3"}}>Stock Project</h1>
           {/* <span className='Spacer'></span> */}
           {/* <span className='Spacer'></span> */}
-          <p>Check out stock prices</p>
-          <p>Practice investing</p>
-          <p>Evaluate historical past gains and losses</p>
           {/* <span className='Spacer'></span> */}
-          <button style={{gridRow: "4 / 6", gridColumn: "1 / 3"}}>Start Now</button>
+          <p style={{gridColumn: "1 / 4"}}>Check out stock prices</p>
+          <p style={{gridColumn: "1 / 4"}}>Practice investing</p>
+          <p style={{gridColumn: "1 / 4"}}>Evaluate historical past gains and losses</p>
+          {/* <span className='Spacer'></span> */}
+          <button style={{gridRow: "5 / 6", gridColumn: "2 / 4"}}>Start Now</button>
         </Banner>
         <Banner backgroundImage={images.stocks1}>
           <h3>GridTest1_0</h3>
@@ -31,8 +30,8 @@ function HomePage() {
           <h3>GridTest1_4</h3>
           <h3>GridTest1_5</h3>
         </Banner>
-        <Banner>t3</Banner>
-        <Banner>t4</Banner>
+        <Banner backgroundImage={images.stocks2}>t3</Banner>
+        <Banner backgroundImage={images.stocks3}>t4</Banner>
       </Carousel>
     </>
   )
