@@ -6,10 +6,6 @@ import { images } from '../../models/assetPaths'
 function HomePage() {
   return (
     <>
-      <Banner className="quop">
-        <div className='Header'>HomePage</div>
-        HomeBanner
-      </Banner>
       <Carousel>
         <Banner backgroundImage={images.stocks0}>
           <h1 style={{gridRow: "1 / 2", gridColumn: "1 / 3"}}>Stock Project</h1>
@@ -33,6 +29,10 @@ function HomePage() {
         <Banner backgroundImage={images.stocks2}>t3</Banner>
         <Banner backgroundImage={images.stocks3}>t4</Banner>
       </Carousel>
+      <Banner className="quop">
+        <div className='Header'>HomePage</div>
+        HomeBanner
+      </Banner>
     </>
   )
 }

@@ -1,0 +1,54 @@
+.StockList 
+{
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  
+  padding: 0 8px;
+}
+
+.StockListItem 
+{
+}
+
+.StockSearchItem
+{
+  font-size: 16pt;
+  
+  padding: 24px !important;
+  width: 100%;
+  
+  background-color: var(--color-White-500);
+  box-shadow: 0 1px 4px var(--color-White-200);
+    
+  display: flex;
+  flex-direction: row;
+  
+  align-items: center;
+  justify-content: center;
+}
+
+
+.StockSearchItem > * 
+{ 
+  text-align: left; 
+  flex: 1; 
+}
+
+.StockSearchItem > *:nth-child(2) 
+{ 
+  flex: 3; 
+  text-align: left; 
+  border: 1px solid var(--color-Grey-400); 
+  border-width: 0 1px;
+  padding: 0 24px;
+  margin: 0 24px;
+}
+
+.StockSearchItem .Icon
+{
+  flex: 0;
+  display: flex;
+  align-items: center;
+  border: 0;
+}
