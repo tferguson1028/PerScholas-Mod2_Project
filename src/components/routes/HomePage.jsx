@@ -11,12 +11,14 @@ function HomePage() {
       </Banner>
       <Carousel>
         <Banner>
-          <h2>GridTest0_0</h2>
+          <h2>Welcome!</h2>
+          <span className='Spacer'></span>
           <h2>GridTest0_1</h2>
-          <h2>GridTest0_2</h2>
-          <h2>GridTest0_3</h2>
-          <h2>GridTest0_4</h2>
-          <h2>GridTest0_5</h2>
+          <p>Practice investing and evaluate past</p>
+          {/* <span className='Spacer'></span> */}
+          {/* <span className='Spacer'></span> */}
+          {/* <h2>GridTest0_4</h2> */}
+          {/* <h2>GridTest0_5</h2> */}
         </Banner>
         <Banner>
           <h3>GridTest1_0</h3>

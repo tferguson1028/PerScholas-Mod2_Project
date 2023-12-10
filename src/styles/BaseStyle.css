@@ -80,3 +80,9 @@ h6 { font-size: 14pt; }
 
 main > * { padding: 12px; margin: 0 8px; }
 main > *.Banner, main > *.Carousel { margin: 0; }
+
+.Invert { filter: invert(0.9); }
+.Icon { vertical-align: middle; }
+.Icon > img { height: 1em; }
+
+.Spacer { color: transparent; min-height: 1rem; }
