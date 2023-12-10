@@ -30,7 +30,7 @@ function Carousel(props)
     setTimeout(() => {
       carouselItems.style.transform = `translate(0, 0)`;
       carouselItems.style.transition = `0.7s`;
-    }, 10);
+    }, 100);
   }
   
   return (
