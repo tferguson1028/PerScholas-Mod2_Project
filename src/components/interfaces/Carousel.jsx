@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react'
-import {images} from '../../models/assetPaths';
+import {icons, images} from '../../models/assetPaths';
 import Icon from '../Icon'
 
 function Carousel(props) 
@@ -46,8 +46,8 @@ function Carousel(props)
         <div className='CarouselItem_Right'>{props.children[loopNumber(currentChild+1, numChildren)]}</div>
       </div>
       <div className='CarouselButtons'>
-        <button className='' onClick={() => handleClick(false)}><Icon iconPath = {"#"} alt="Cycle Left"/></button>
-        <button className='' onClick={() => handleClick(true)}><Icon iconPath = {"#"} alt="Cycle Right"/></button>
+        <button onClick={() => handleClick(false)}><Icon iconPath = {icons.caret_left} alt="Cycle Left"/></button>
+        <button onClick={() => handleClick(true)}><Icon iconPath = {icons.caret_right} alt="Cycle Right"/></button>
       </div>
       {/* This is needed so onLoad fires https://www.reddit.com/r/learnreactjs/comments/gv24ae/onload_event_not_firing_on_conditional_render/*/}
       <img src={images.stocks0} alt="" style={{display: "none"}}/> 

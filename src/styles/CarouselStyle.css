@@ -23,13 +23,14 @@
   width: 100%;
 }
 
+.CarouselItems > * > *
+{
+  padding: 12px 72px !important;
+}
+
 .CarouselItem_Left
 {
   left: -100%;
-}
-
-.CarouselItem_Center
-{
 }
 
 .CarouselItem_Right
@@ -43,8 +44,6 @@
   top: 0;
   left: 0;
   
-  padding: 0 12px;
-  
   display: flex;
   flex-direction: row;
   width: 100%;
@@ -53,4 +52,35 @@
   justify-content: space-between;
 
   z-index: 10;
+}
+
+.CarouselButtons button
+{
+  border: none;
+  background: none;
+  height: 100%;
+  width: 64px;
+  object-fit: cover;
+}
+
+.CarouselButtons > button > *
+{
+  display: flex;
+  height: 100%;
+  width: 100%;
+  
+  align-items: center;
+  justify-content: center;
+}
+
+.CarouselButtons img
+{
+  width: 50%;
+  height: auto;
+}
+
+.CarouselButtons button:hover
+{
+  border: none;;
+  background-color: #ffffffa0;
 }
