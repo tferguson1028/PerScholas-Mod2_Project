@@ -63,6 +63,9 @@
   position: absolute;
   top: 0;
   left: 0;
+  margin: 0;
+  padding: 0;
+  border-radius: 0;
 
   box-shadow: initial;
   border: none;

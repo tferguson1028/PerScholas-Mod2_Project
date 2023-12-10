@@ -5,6 +5,9 @@ button
   box-shadow: 0 0px 2px var(--color-Primary-400);
   color: var(--color-Black-200);
   
+  width: 80%;
+  height: 100%;
+  
   font-size: 13pt;
   
   border-radius: 4px;

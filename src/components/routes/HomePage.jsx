@@ -13,14 +13,15 @@ function HomePage() {
       <Carousel>
         <Banner backgroundImage={images.stocks0}>
           <span className='Spacer'></span>
+          <h1>Stock Project</h1>
           <span className='Spacer'></span>
-          <span className='Spacer'></span>
-          <h2>Evaluate Stock History</h2>
-          <span className='Spacer'></span>
-          <p>Practice investing and evaluate past</p>
-          <span className='Spacer'></span>
-          <span className='Spacer'></span>
-          <button>Try out now!</button>
+          {/* <span className='Spacer'></span> */}
+          {/* <span className='Spacer'></span> */}
+          <p>Check out stock prices</p>
+          <p>Practice investing</p>
+          <p>Evaluate historical past gains and losses</p>
+          {/* <span className='Spacer'></span> */}
+          <button style={{gridRow: "4 / 6", gridColumn: "1 / 3"}}>Start Now</button>
         </Banner>
         <Banner backgroundImage={images.stocks1}>
           <h3>GridTest1_0</h3>
