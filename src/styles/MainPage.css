@@ -4,5 +4,15 @@ main
   display: flex;
   flex-direction: column;
   
+  /* gap: 4px; */
+  
   /* overflow-x: hidden; */
+}
+
+main > *
+{
+  background-color: var(--color-White-500);
+  border-radius: 4px;
+  margin: 8px 24px;
+  padding: 24px;
 }
