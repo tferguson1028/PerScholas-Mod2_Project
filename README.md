@@ -1,4 +1,16 @@
-# Portfolio Piece Title
+# Stock History Analyzer
+
+Check out stock prices, practice using the stock market, or calculate gains and losses using past stock data.
+
+## Technologies Used
+
+- React
+- Node.js
+- [Financial Modeling Prep API](https://site.financialmodelingprep.com/)
+- [Image Charts API](https://www.image-charts.com/)
+- Images via [Unsplash](https://unsplash.com/)
+- Icons by [Icons8](https://icons8.com/)
+
 <!--- 
 
 # Getting Started with Create React App
