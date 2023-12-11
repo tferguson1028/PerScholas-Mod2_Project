@@ -8,7 +8,7 @@ function HomePage() {
     <>
       <Carousel>
         <Banner backgroundImage={images.stocks0}>
-          <h1 style={{gridRow: "1 / 2", gridColumn: "1 / 3"}}>Stock Project</h1>
+          <h1 style={{gridRow: "1 / 2", gridColumn: "1 / 3"}}>Stock History Analysis</h1>
           {/* <span className='Spacer'></span> */}
           {/* <span className='Spacer'></span> */}
           {/* <span className='Spacer'></span> */}

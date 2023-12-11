@@ -4,6 +4,7 @@ main
   display: flex;
   flex-direction: column;
   
+  min-height: 90vh;
   /* gap: 4px; */
   
   /* overflow-x: hidden; */

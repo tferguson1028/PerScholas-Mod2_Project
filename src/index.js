@@ -18,7 +18,8 @@ import "./styles/CarouselStyle.css";
 import "./styles/MainPage.css";
 import "./styles/StockListStyle.css";
 import "./styles/CompanyPageStyle.css";
-import "./styles/SearchBarStyle.css"
+import "./styles/SearchBarStyle.css";
+import "./styles/FooterStyle.css";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

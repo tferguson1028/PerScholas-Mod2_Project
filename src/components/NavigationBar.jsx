@@ -6,7 +6,7 @@ import Icon from './Icon';
 function NavigationBar() {
   return ( 
     <div className="NavigationBar">
-      <h1>Page Title</h1>
+      <h1>Stock History Analyzer</h1>
       <span className='NavButtonGroup'>
       { 
         Object.keys(pages).map(function(page, index) 

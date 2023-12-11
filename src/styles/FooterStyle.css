@@ -1,0 +1,16 @@
+footer
+{
+  font-display: flex;
+  flex-direction: column;
+  
+  padding: 18px;
+  
+  color: var(--color-White-500);
+  background-color: var(--color-Primary-100);
+  border-bottom: 4px solid var(--color-Black-100);
+}
+
+footer a
+{
+  color: var(--color-Primary-500);
+}
