@@ -2,18 +2,20 @@
 {
   display: flex;
   flex-direction: column;
-  
+    
   gap: 12px;
 }
 
 .StockHeader h1, 
 .StockHeader h2, 
-.StockHeader h3, 
-.StockHeader h4
+.StockHeader h3,
+.StockHeader h4,
+.StockHeader h5,
+.StockHeader h6
 {
   margin: 0;
   padding: 0;
-} 
+}
 
 
 .StockHeader > .CompanyHead
@@ -23,18 +25,38 @@
   gap: 24px;
 
   align-items: flex-end;
+  
+  height: 4em;
+}
+
+.StockHeader > .CompanyHead > .CompanyLogo { height: 100%; margin: 0; padding: 0; }
+
+.StockHeader > .CompanyHead > .WebsiteLink 
+{ 
+  flex: 1; 
+  text-align: right;
+    
+  display: flex;
+  flex-direction: row;
+  
+  height: 100%;
+  
+  gap: 16px;
+  align-items: flex-start;
+  justify-content: right;
+  
 }
 
 .StockHeader > .StockSummary
 {
   display: flex;
   flex-direction: row;
-  
-  padding: 24px;
-  
+      
+  background-color: var(--color-White-600);
+  box-shadow: 0 0 4px inset var(--color-White-300);
   border-radius: 3px;
   
-  background-color: var(--color-White-500);
+  padding: 24px;
 }
 
 .StockHeader > .StockSummary > *
@@ -46,4 +68,54 @@
 
 .StockHeader > .StockSummary > * > .title { margin-right: 24px; }
 
+.StockGraph > img
+{
+  background-color: var(--color-White-600);
+  border-radius: 3px;
+  box-shadow: 0 0 4px inset var(--color-White-300);
+}
 
+.FinancialInfo > h1, .CompanyInfo > h1 
+{ 
+  color: var(--color-Primary-300); 
+  margin-top: 0;
+  padding: 0;
+}
+
+.FinancialInfo > button, .CompanyInfo > button { width: 100%; margin-top: 32px; }
+
+.GridSection
+{
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  gap: 24px;
+  
+  background-color: var(--color-White-600);
+  box-shadow: 0 0 4px inset var(--color-White-300);
+  border-radius: 3px;
+  
+  padding: 24px;
+}
+
+.GridSection > *
+{
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+}
+
+.GridSection > * > *:nth-child(1)
+{
+  flex-basis: 25%;
+  font-weight: bold;
+}
+
+.CompanyInfo > p
+{
+  display: flex;
+  flex-direction: column;
+  
+  gap: 8pt;
+  
+  word-spacing: 1pt;
+}

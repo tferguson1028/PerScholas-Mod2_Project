@@ -53,17 +53,18 @@ function CompanyStockPage()
     else
       return (
         <>
-          <div className='TextTitle'>{data.companyName}</div>
+          {/* <div className='TextTitle'>{data.companyName}</div> */}
           <header className='StockHeader'>
             <div className='CompanyHead'>
-              <div className="CompanyLogo">
-                <img src={data.image} alt="#" />
-              </div>
+              <img className="CompanyLogo" src={data.image} alt="#" />
               <h2 className='CompanySymbol'>{data.symbol}</h2>
               <h2 className='CompanyName'>{data.companyName}</h2>
+              <div className='WebsiteLink'>
+                <h6>Company Website: </h6>
+                <a href={data.website}>{data.website}</a>
+              </div>
             </div>
-            <div className='WebsiteLink'><a href={data.website}>{data.website}</a></div>
-            <div className='StockSummary'>
+            <div className='GridSection'>
               <span className='CurrentPrice'>
                 <span className='title'>Current Price:</span>
                 <span className='content'>{data.price} {data.currency}</span>
@@ -79,44 +80,57 @@ function CompanyStockPage()
           
           <section className='FinancialInfo'>
             <h1>Financial Information</h1>
-            <span className='CurrentPrice'>
-              <span className='title'>Current Price</span>
-              <span className='content'>{data.price} {data.currency}</span>
-            </span>
-            <span className='Range'>
-              <span className='title'>Price Range</span>
-              <span className='content'>{data.range}</span>
-            </span>
-            <span className='Changes'>
-              <span className='title'>Recent Price Change</span>
-              <span className='content'>{data.changes}</span>
-            </span>
-            <span className='Market Cap'>
-              <span className='title'>Market Cap</span>
-              <span className='content'>{data.mktCap} {data.currency}</span>
-            </span>
+            <div className='GridSection'>
+              <span className='CurrentPrice'>
+                <span className='title'>Current Price:</span>
+                <span className='content'>{data.price} {data.currency}</span>
+              </span>
+              <span className='Range'>
+                <span className='title'>Price Range:</span>
+                <span className='content'>{data.range}</span>
+              </span>
+              <span className='Changes'>
+                <span className='title'>Recent Price Change:</span>
+                <span className='content'>{data.changes}</span>
+              </span>
+              <span className='Market Cap'>
+                <span className='title'>Market Cap:</span>
+                <span className='content'>{data.mktCap} {data.currency}</span>
+              </span>
+            </div>
+            <button onClick={addDataToStorage}>Add for analysis</button>
           </section>
-          <button onClick={addDataToStorage}>Add for analysis</button>
           
           <section className='CompanyInfo'>
             <h1>Company Information</h1>
-            <span className='Industry'>
-              <span className='title'>Industry</span>
-              <span className='content'>{data.industry}</span>
-            </span>
-            <span className='Location'>
-              <span className='title'>Location</span>
-              <span className='content'>{data.city}, {data.state}. {data.country}</span>
-            </span>
-            <span className=''>
-              <span className='title'>Employees</span>
-              <span className='content'>{data.fullTimeEmployees}</span>
-            </span>
-            <span className=''>
-              <span className='title'>Initial Public Offering Data</span>
-              <span className='content'>{data.ipodate}</span>
-            </span>
-            <p className='Description'>{data.description}</p>
+            <p className='Description'>
+              {
+                // I gave up on making my own regex. https://stackoverflow.com/a/25736082
+                // data.description                
+                String(data.description).split(/(?<!\w\.\w.)(?<![A-Z][a-z]\.)(?<=\.|\?)\s/gm).map((str) =>
+                {
+                  return <div>{str}</div>
+                })
+              }
+            </p>
+            <div className='GridSection'>
+              <span className='Industry'>
+                <span className='title'>Industry:</span>
+                <span className='content'>{data.industry}</span>
+              </span>
+              <span className='Location'>
+                <span className='title'>Location:</span>
+                <span className='content'>{data.city}, {data.state}. {data.country}</span>
+              </span>
+              <span className=''>
+                <span className='title'>Employees:</span>
+                <span className='content'>{data.fullTimeEmployees}</span>
+              </span>              
+              <span className=''>
+                <span className='title'>IPO Date:</span>
+                <span className='content'>{data.ipodate}</span>
+              </span>
+            </div>
           </section>
         </>
     )

@@ -43,9 +43,9 @@ function StockGraph(props)
     console.log(stockData);
     console.log(stockGraph);
     return  (
-      // <div className='StockGraph'>
+      <div className='StockGraph'>
         <img src={"https://"+stockGraph} alt="" />  
-      // </div>
+      </div>
     )
   }
   
