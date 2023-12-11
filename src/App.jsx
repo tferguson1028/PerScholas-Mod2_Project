@@ -29,7 +29,8 @@ function App()
       localStorage.setItem("accountCompanyStack", []);
     }
     
-    if(localStorage.getItem("accountBalanceInitial") === null ||
+    if(
+      localStorage.getItem("accountBalanceInitial") === null ||
       typeof localStorage.getItem("accountBalanceInitial") === "undefined"
     )
     {
