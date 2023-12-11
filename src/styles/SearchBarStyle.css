@@ -1,0 +1,46 @@
+.SearchBar
+{
+  background-color: var(--color-White-600);
+  
+  
+  border-radius: 50vw;
+  padding: 4px 0 4px 32px;
+  display: flex;
+  flex-direction: row;
+}
+
+/* https://stackoverflow.com/questions/1014861/is-there-a-css-parent-selector */
+.SearchBar:has(input:focus)
+{
+  box-shadow: 0 0 6px inset var(--color-White-100);
+}
+
+/* https://stackoverflow.com/questions/2943548/how-to-reset-remove-chromes-input-highlighting-focus-border */
+.SearchBar input
+{
+  flex: 1;
+  color: var(--color-Grey-400);
+  
+  background-color: transparent;
+  border: 0 solid transparent;
+  outline: none;
+}
+
+.SearchBar input:focus
+{
+  flex: 1;
+  color: var(--color-Grey-100);
+  
+  background-color: transparent;
+  border: 0 solid transparent;
+}
+
+.SearchBar .IconButton
+{
+  width: min-content;
+  height: min-content;
+  
+  background-color: transparent !important;
+  border: 0px;
+  box-shadow: 0 0 0 transparent;
+}

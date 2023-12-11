@@ -21,12 +21,10 @@ function SearchBar(props)
   }
   
   return (
-    <div className="SearchBar" >
-      <form action="submit" onSubmit={handleSubmit}>
+      <form className="SearchBar" action="submit" onSubmit={handleSubmit}>
         <input type="text" name="searchBar" onChange={handleChange}/>
         <IconButton type="submit" iconPath={icons.search} />
       </form>
-    </div>
   )
 }
 
