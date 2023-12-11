@@ -73,6 +73,8 @@
   background-color: var(--color-White-600);
   border-radius: 3px;
   box-shadow: 0 0 4px inset var(--color-White-300);
+  
+  width: 100%;
 }
 
 .FinancialInfo > h1, .CompanyInfo > h1 

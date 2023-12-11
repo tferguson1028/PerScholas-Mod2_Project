@@ -1,4 +1,4 @@
-const baseUrl = "image-charts.com/chart.js/2.8.0?c=";
+const baseUrl = "image-charts.com/chart.js/2.8.0?bkg=white&c=";
 function generateGraphURL(dataPointsArr)
 {
   let graphData = {
