@@ -47,8 +47,8 @@ function CompanyStockPage()
   
   function loaded()
   {
-    const data = companyData[0]; // API returns info as array of length 1.
-    if (Array(data).length == 0)
+    const data = companyData[0]; // API returns info as array of length 1 with an object.
+    if (data == null || typeof data != "object")
       return noCompanyError();
     else
       return (
