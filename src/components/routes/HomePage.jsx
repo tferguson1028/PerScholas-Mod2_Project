@@ -29,10 +29,18 @@ function HomePage() {
         <Banner backgroundImage={images.stocks2}>t3</Banner>
         <Banner backgroundImage={images.stocks3}>t4</Banner>
       </Carousel>
-      <Banner className="quop">
-        <div className='Header'>HomePage</div>
-        HomeBanner
+      <div>
+        <h3>Service Info</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil reiciendis nulla dolorum dolores ex impedit, animi eligendi voluptatem at asperiores sit voluptate? Nulla ducimus ullam molestiae consequatur, aperiam beatae eum.</p>
+      </div>
+      <Banner>
+        <div className='Header'>Banner 2</div>
+        Banner Content
       </Banner>
+      <div>
+        <h3>News</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil reiciendis nulla dolorum dolores ex impedit, animi eligendi voluptatem at asperiores sit voluptate? Nulla ducimus ullam molestiae consequatur, aperiam beatae eum.</p>
+      </div>
     </>
   )
 }
