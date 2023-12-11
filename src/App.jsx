@@ -20,10 +20,21 @@ function App()
   {
     // if(localStorage.getItem("loginStatus") === null)
       // localStorage.setItem("loginStatus", false);
-    if(localStorage.getItem("accountCompanyStack") === null)
+    if(
+      localStorage.getItem("accountCompanyStack") === null ||
+      typeof localStorage.getItem("accountCompanyStack") === "undefined"
+    )
+    {
+        
       localStorage.setItem("accountCompanyStack", []);
-    if(localStorage.getItem("accountBalanceInitial") === null)
+    }
+    
+    if(localStorage.getItem("accountBalanceInitial") === null ||
+      typeof localStorage.getItem("accountBalanceInitial") === "undefined"
+    )
+    {
       localStorage.setItem("accountBalanceInitial", 0);
+    }
   }
 
   useEffect(() => {setupLocalStorage()}, []);
