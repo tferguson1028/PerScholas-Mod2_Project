@@ -11,6 +11,15 @@ Check out stock prices, practice using the stock market, or calculate gains and 
 - Images via [Unsplash](https://unsplash.com/)
 - Icons by [Icons8](https://icons8.com/)
 
+## Instructions
+
+There are no environment variables for the project so you will have to acquire your own API key.
+When copying the project, in order to run it:
+1. Go to [Financial Modeling Prep](https://site.financialmodelingprep.com/) and get an API key.
+2. Create an apiKey.jsx file within ./src/components/models/
+3. Export a variable named "apiKey" containing your API key.
+
+
 <!--- 
 
 # Getting Started with Create React App
